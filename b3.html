@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" name="" id="snt">
+    <button onclick="testsnt()">snt</button>
+
+    <script>
+        function testsnt() {
+            var sont =  +document.getElementById("snt").value;
+            var flag = true;
+
+
+            if (sont < 2) {
+                flag = false;
+            }
+            else {
+
+                for (var i = 2; i < sont - 1; i++) {
+                    if (sont % i == 0) {
+                        flag = false;
+                        break;  
+                    }
+                }
+
+                if (flag == true) {
+                    document.write(sont + " : this is số nguyên tố")
+                }
+                else {
+                    document.write(sont + " :  not số nguyên tố ")
+                }
+            }
+        }
+       
+    
+
+
+    </script>
+</body>
+
+</html>
